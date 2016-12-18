@@ -1,6 +1,4 @@
-### [Array#sum](https://github.com/rails/rails/commit/7ad4690b2149fbb23faa179c21698b92ff383c73)
+### [Support for unified Integer class in Ruby 2.4](https://github.com/rails/rails/commit/89e2f7e722e06f900bdb1c14db33073c90d7cdea)
 
-* Ruby 2.4でArray#sumが追加されました
-* しかし、Railsには太古の昔よりArray#sumが存在しており、かつ、Ruby本体に追加されたArray#sumはRailsのArray#sumと挙動が違いました
-  * RailsのArray#sumはNumeric以外のClassに対してもsum出来る
-* そのため、Rails(というかActive Support)を利用している場合、引き続きRailsのArray#sumがよばれるようになっています
+* Fixnum と BignumがIntegerに統合された件の対応
+* 基本的にはIntegerを使うように修正されてしますが、下位互換の為に一部Fixnum、Bignumが残っています

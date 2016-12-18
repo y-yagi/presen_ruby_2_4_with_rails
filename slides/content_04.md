@@ -1,4 +1,5 @@
-### [Support for unified Integer class in Ruby 2.4](https://github.com/rails/rails/commit/89e2f7e722e06f900bdb1c14db33073c90d7cdea)
+### [Regexp#match?](https://github.com/rails/rails/commit/575dbeeefcaafeb566afc07cdd8b55603b698d9f)
 
-* Fixnum と BignumがIntegerに統合された件の対応
-* 基本的にはIntegerを使うように修正されてしますが、下位互換の為に一部Fixnum、Bignumが残っています
+* Ruby 2.4で正規表現にマッチしたかどうかチェックする為のRegexp#match?メソッドが追加されました
+* Regexp#matchより高速なので、#matchでチェックしていた箇所を#match?を使うようrails内部でも書き直しが行われました
+* となると、当然Ruby 2.3以下でどうするか、という問題が発生するのですが、Ruby 2.3でもRegexp#match?が使えるよう、ASにメソッドが追加されています
